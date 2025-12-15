@@ -1,0 +1,1 @@
+export { AfishaSection } from './ui/afisha';

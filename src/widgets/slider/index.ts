@@ -1,0 +1,1 @@
+export { TheaterSlider } from './ui/slider.tsx';
