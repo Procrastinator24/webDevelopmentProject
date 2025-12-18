@@ -1,0 +1,278 @@
+.buy-container{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  height: 110px;
+
+}
+.somediv{
+  align-content: center;
+}
+.cost-container{
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  align-content: center;
+  text-align: center;
+  width: 15%;
+}
+
+.selection-container {
+  display: flex;
+  gap: 150px;
+  max-width: 1200px;
+  margin: 60px 0 0 70px;
+  padding: 0 20px;
+}
+
+.selection-left {
+  flex: 1;
+  max-width: 400px;
+}
+
+.selection-right {
+  flex: 2;
+}
+
+/* Левая часть - выбор даты */
+.date-selection {
+  margin-bottom: 40px;
+}
+
+.date-selection h3 {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.date-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.date-btn {
+  padding: 15px 20px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.date-btn:hover {
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+.date-btn-active {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  color: white;
+}
+
+.date-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+  padding-left: 5px;
+}
+
+/* Секция оплаты */
+.payment-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.selected-info {
+  margin-bottom: 30px;
+}
+
+.selected-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+.selected-item.total {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #b91c1c;
+  border-bottom: none;
+  padding-top: 20px;
+}
+
+.payment-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pay-btn {
+  padding: 18px;
+  background: #b91c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pay-btn:hover {
+  background: #991b1b;
+}
+
+.cancel-btn {
+  padding: 18px;
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+/* Правая часть - схема зала */
+.hall-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stage {
+  background: #4b5563;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hall {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.row-label {
+  width: 60px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.seats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.seat {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4b5563;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.seat:hover {
+  transform: scale(1.1);
+  border-color: #b91c1c;
+}
+
+.seat.available {
+  background: #10b981;
+}
+
+.seat.selected {
+  background: #b91c1c;
+}
+
+.seat.occupied {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Легенда */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.legend-item .seat {
+  cursor: default;
+  width: 20px;
+  height: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .selection-container {
+    flex-direction: column;
+  }
+
+  .selection-left {
+    max-width: 100%;
+  }
+
+  .seats {
+    gap: 6px;
+  }
+
+  .seat {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+}
+.seats-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}

@@ -1,36 +1,22 @@
 import React from 'react';
 import './afisha.scss';
+//import {Performance} from '@/entities/Perfomance'
+import {Performance} from '../../../entities/Perfomance/Perfomance.ts'
+import IvanImg from "@/shared/images/marin'sChildhood.jpg";
+import {MOCK_PERFORMANCES} from "../../../Data/MockData.ts";
+import {useNavigate} from "react-router-dom";
 
-interface Performance {
-    id: number;
-    title: string;
-    date: string;
-    ageLimit: string;
-    description: string;
-    image: string;
-}
 
-const MOCK_PERFORMANCES: Performance[] = [
-    {
-        id: 1,
-        title: 'Щелкунчик',
-        date: '15 дек, 19:00',
-        ageLimit: '6+',
-        description: 'Волшебная рождественская сказка',
-        image: '/performance-1.jpg',
-    },
-    {
-        id: 2,
-        title: 'Ревизор',
-        date: '20 дек, 18:00',
-        ageLimit: '12+',
-        description: 'Классическая комедия',
-        image: '/performance-2.jpg',
-    },
-    // Добавьте больше моковых данных
-];
+
+
 
 export const AfishaSection: React.FC = () => {
+
+    const navigate = useNavigate()
+    const handleBuyClick = (Id) => {
+        navigate(`/event/${Id-1}`);
+    }
+
     return (
         <section className="afisha-section">
         <div className="container">
@@ -49,7 +35,7 @@ export const AfishaSection: React.FC = () => {
                 <p className="performance-card__description">
             {performance.description}
             </p>
-            <button className="performance-card__btn">
+            <button className="performance-card__btn" onClick={() => handleBuyClick(performance.id)}>
             Купить билет
                 </button>
         </div>

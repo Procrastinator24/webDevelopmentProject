@@ -1,0 +1,1 @@
+export {EventPage} from "./ui/event.tsx"

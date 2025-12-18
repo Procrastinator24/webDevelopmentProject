@@ -3,22 +3,19 @@ import { Header } from '@/widgets/header';
 import { TheaterSlider } from '@/widgets/slider';
 import { AfishaSection } from '@/widgets/afisha';
 import { NewsSection } from '@/widgets/news';
+import {Footer} from "@/widgets/Footer.tsx";
 // import '../';
 
 export const MainPage: React.FC = () => {
     return (
         <div className="main-page">
-            <Header />
+            <Header/>
             <main>
                 <TheaterSlider />
                 <AfishaSection />
                 <NewsSection />
             </main>
-            <footer className="footer">
-                <div className="container">
-                    <p>© 2023 Театр Юного Зрителя. Все права защищены.</p>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     );
 };

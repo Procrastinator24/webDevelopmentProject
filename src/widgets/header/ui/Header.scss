@@ -1,4 +1,7 @@
 // src/widgets/header/ui/Header.scss
+.logoImg{
+  width: 50px;
+}
 .header {
   padding: 1rem 0;
   border-bottom: 1px solid #e5e7eb;
@@ -13,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+
 
     &-text {
       font-size: 1.25rem;

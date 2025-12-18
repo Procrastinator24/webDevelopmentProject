@@ -1,0 +1,133 @@
+.img-container {
+
+  height: 65vh;
+
+}
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -350px;
+}
+.buy-button{
+  background-color: #b91c1c;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.content-columns {
+  width: 100%;
+
+  .content-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Два таба на всю ширину
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+
+    .tab-btn {
+      padding: 20px 0;
+      background: none;
+      border: none;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #6b7280;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        color: #374151;
+        background-color: #f9fafb;
+      }
+
+      &--active {
+        color: #b91c1c;
+        font-weight: 600;
+
+        // Красная нижняя граница на всю ширину таба
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-color: #b91c1c;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+
+      // Разделитель между табами
+      &:first-child {
+        border-right: 1px solid #e5e7eb;
+      }
+    }
+  }
+
+  .content-body {
+    width: 100%;
+
+    .content-text {
+      width: 100%;
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: #4b5563;
+        margin-bottom: 20px;
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .content-columns {
+    .content-tabs {
+      .tab-btn {
+        padding: 16px 0;
+        font-size: 1rem;
+      }
+    }
+
+    .content-body {
+      .content-text {
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+// Вариант с hover эффектом для неактивных табов
+.content-tabs {
+  .tab-btn:not(.tab-btn--active):hover {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 2px;
+      background-color: #d1d5db;
+      border-radius: 2px;
+    }
+  }
+}

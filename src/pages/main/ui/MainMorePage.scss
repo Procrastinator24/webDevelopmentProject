@@ -1,0 +1,324 @@
+.main-more-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-stats-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 0 80px;
+
+  .city-stats-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .theater-slider__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    &__icon {
+
+      color: white;
+      flex-shrink: 0;
+    }
+
+    &__info {
+      flex: 1;
+    }
+
+    &__value {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    &__label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+.columns-more-info {
+  padding: 80px 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .content-column {
+    .content-tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+
+      .tab-btn {
+        padding: 14px 32px;
+        background: white;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #6b7280;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: #b91c1c;
+          color: #b91c1c;
+        }
+
+        &--active {
+          background: #b91c1c;
+          border-color: #b91c1c;
+          color: white;
+
+          &:hover {
+            background: #991b1b;
+            border-color: #991b1b;
+          }
+        }
+      }
+    }
+
+    .content-body {
+      .content-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 24px;
+        line-height: 1.2;
+      }
+
+      .content-text {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: #4b5563;
+        margin-bottom: 40px;
+
+        p {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .content-features {
+        .features-list {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .feature-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 15px 20px;
+          background: white;
+          border-radius: 8px;
+          border-left: 4px solid #b91c1c;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+          .feature-icon {
+            font-size: 1.25rem;
+          }
+
+          span:last-child {
+            flex: 1;
+            font-size: 0.95rem;
+            color: #4b5563;
+          }
+        }
+      }
+    }
+  }
+
+  .image-column {
+    position: sticky;
+    top: 20px;
+
+    @media (max-width: 992px) {
+      position: relative;
+      top: 0;
+    }
+
+    .city-image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+
+      .city-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        padding: 30px 20px 20px;
+
+        .overlay-text {
+          color: white;
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .image-caption {
+      text-align: center;
+      color: #6b7280;
+      font-style: italic;
+      padding: 0 20px;
+    }
+  }
+}
+
+.additional-info {
+  padding: 60px 0;
+  background: white;
+
+  .additional-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1f2937;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .info-card {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-top: 4px solid #b91c1c;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #1f2937;
+    }
+
+    p {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+  }
+}
+
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: auto;
+
+  p {
+    margin: 0;
+    opacity: 0.8;
+  }
+}
+
+// Контейнер (если еще нет в глобальных стилях)
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .city-stats-section {
+    padding: 40px 0 60px;
+
+    .city-stats-title {
+      font-size: 2rem;
+    }
+
+    .stat-card {
+      padding: 20px;
+    }
+  }
+
+  .columns-more-info {
+    padding: 50px 0;
+
+    .content-column {
+      .content-tabs {
+        .tab-btn {
+          padding: 12px 24px;
+          flex: 1;
+          min-width: 150px;
+        }
+      }
+
+      .content-body {
+        .content-title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}

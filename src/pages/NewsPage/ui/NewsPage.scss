@@ -1,0 +1,26 @@
+.content-news{
+  padding: 10px;
+}
+
+.news-img-container{
+  height: 65vh;
+}
+.news-img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -150px;
+}
+
+.news-content-body{
+  padding: 1% 5%;
+}
+
+.news-date{
+  color: #6b7280;
+}
+
+//.news-title{
+//  text
+//}

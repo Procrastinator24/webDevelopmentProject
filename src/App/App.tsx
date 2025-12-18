@@ -1,9 +1,9 @@
 import React from 'react';
-import { MainPage } from '@/pages/main';
 import './styles/global.scss';
+import {AppRouter} from "./router";
 
 function App() {
-    return <MainPage />;
+    return <AppRouter/>;
 }
 
 export default App;
