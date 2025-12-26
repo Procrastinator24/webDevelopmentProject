@@ -48,7 +48,7 @@ classnames - Утилита для работы с CSS классами
 
 git clone https://github.com/Procrastinator24/webDevelopmentProject.git
 
-cd theater-tickets
+cd webDevelopmentProject
 
 2. **Установка зависимостей:**
 
