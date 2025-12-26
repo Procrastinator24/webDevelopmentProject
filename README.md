@@ -46,7 +46,8 @@ classnames - Утилита для работы с CSS классами
 
 1. **Клонирование репозитория**
 
-git clone https://github.com/your-username/theater-tickets.git
+git clone https://github.com/Procrastinator24/webDevelopmentProject.git
+
 cd theater-tickets
 
 2. **Установка зависимостей:**
