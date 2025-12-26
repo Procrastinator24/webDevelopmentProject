@@ -1,5 +1,5 @@
 import {Performance} from "../entities/Perfomance/Perfomance.ts";
-import IvanImg from "../shared/images/marin'sChildhood.jpg";
+import IvanImg from "@/shared/images/innopolis.jpg";
 import NewsImage1 from "@/shared/images/news1.jpg"
 import NewsImage2 from "@/shared/images/news2.jpg"
 import type {NewsItem} from "../entities/Perfomance/NewsItem.ts";

@@ -10,7 +10,7 @@ export const NewsCard: React.FC = ({news}) => {
 
     const handleNewsClick = (Id?) =>{
         console.log(Id ? Id : "hahaha")
-        return Id ?  navigate(`news-page/${Id-1}`) : navigate("news-page")
+        return Id ?  navigate(`/news-page/${Id-1}`) : navigate("news-page")
     }
     return (
         <div key={news.id} className="news-card">

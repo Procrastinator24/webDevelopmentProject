@@ -108,7 +108,7 @@
   // Секция со статистикой
   &__stats-section {
     background: white;
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   &__stats-content {
@@ -120,15 +120,25 @@
   &__stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 20px;
   }
-
+  &__to_more_info{
+    align-content: center;
+    margin-left: 50%;
+  }
+  &__link_to_more{
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover{
+      color: #374151;
+    }
+  }
   .stat-card {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 30px;
+    padding: 10px;
     background: #f8f9fa;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;

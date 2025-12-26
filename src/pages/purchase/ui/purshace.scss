@@ -48,8 +48,9 @@
 
 .date-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -112,18 +113,21 @@
 
 .payment-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  height: 40px;
 }
 
 .pay-btn {
-  padding: 18px;
-  background: #b91c1c;
+  //padding: 0 5px 5px 0;
+  background: #FA434B;
+  width: 60%;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 22px;
   font-size: 1.125rem;
-  font-weight: 600;
+  //font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -133,13 +137,14 @@
 }
 
 .cancel-btn {
-  padding: 18px;
-  background: white;
-  color: #6b7280;
+  //padding: 18px;
+  width: 50%;
+  background: #C4C4C4;
+  color: black;
   border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1.125rem;
-  font-weight: 600;
+  border-radius: 22px;
+  //font-size: 1.125rem;
+  //font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -226,6 +231,7 @@
 .seat.occupied {
   background: #9ca3af;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* Легенда */

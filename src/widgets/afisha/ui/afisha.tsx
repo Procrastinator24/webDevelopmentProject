@@ -18,29 +18,45 @@ export const AfishaSection: React.FC = () => {
     }
 
     return (
-        <section className="afisha-section">
+        <section id="afisha" className="afisha-section">
         <div className="container">
         <h2 className="section-title">Афиша</h2>
 
             <div className="afisha-grid">
-        {MOCK_PERFORMANCES.map((performance) => (
-                <div key={performance.id} className="performance-card">
-            <div className="performance-card__chips">
-            <span className="chip chip--date">{performance.date}</span>
-                <span className="chip chip--age">{performance.ageLimit}</span>
-            </div>
+                {MOCK_PERFORMANCES.map((performance) => (
+                    <div
+                        key={performance.id}
+                        className="performance-card"
+                        onClick={() => handleBuyClick(performance.id)} // Весь клик по карточке
+                        style={{
+                            backgroundImage: `url(${performance.image})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}
+                    >
+                        {/* Затемнение для лучшей читаемости текста */}
+                        <div className="performance-card__overlay"></div>
 
-            <div className="performance-card__content">
-            <h3 className="performance-card__title">{performance.title}</h3>
-                <p className="performance-card__description">
-            {performance.description}
-            </p>
-            <button className="performance-card__btn" onClick={() => handleBuyClick(performance.id)}>
-            Купить билет
-                </button>
-        </div>
-        </div>
-))}
+                        {/* Чипсы в левом верхнем углу */}
+                        <div className="performance-card__chips">
+                            <span className="chip chip--date">{performance.date}</span>
+                            <span className="chip chip--age">{performance.ageLimit}</span>
+                        </div>
+
+                        {/* Контент внизу карточки */}
+                        <div className="performance-card__content">
+                            <h3 className="performance-card__title">{performance.title}</h3>
+                            <p className="performance-card__description">
+                                {performance.description}
+                            </p>
+                            <div className="performance-card__footer">
+                                <span className="performance-card__duration">{performance.duration}</span>
+
+                            </div>
+                        </div>
+                    </div>
+                ))}
     </div>
 
     <div className="info-buttons">
