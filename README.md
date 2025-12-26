@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+Веб-платформа для покупки билетов в театр с интерактивной системой выбора мест.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎭 Цель и назначение проекта
 
-Currently, two official plugins are available:
+**Основная цель:** Создать удобный и интуитивно понятный онлайн-сервис для бронирования театральных билетов, который повысит доступность культурных мероприятий и улучшит пользовательский опыт.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Задачи проекта:**
+- Упростить процесс выбора и покупки билетов
+- Предоставить наглядную интерактивную схему зала
+- Автоматизировать процесс бронирования мест
+- Создать современный цифровой образ театра
 
-## React Compiler
+## Участники команды
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Фронтенд разработчик - Козлов Егор Сергеевич - Разработка клиентской части, UI/UX
+Бэкенд Разработчик - Лосев Ярослав Витальевич - Разработка серверной части, API 
+Дизайнер - Парфенова Анна Ивановна - Дизайн интерфейса, UX исследования 
 
-## Expanding the ESLint configuration
+### Технологический стек
+**Frontend**
+React 18 - Библиотека для построения пользовательских интерфейсов
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TypeScript - Статическая типизация
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Vite - Сборщик и development сервер
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+React Router DOM - Клиентская маршрутизация
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+SCSS/SASS - Препроцессор CSS
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+classnames - Утилита для работы с CSS классами
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Быстрый старт
+
+### Предварительные требования
+
+- Node.js 18.0 или выше
+- npm 9.0 или выше
+- Git
+
+### Установка и запуск
+
+1. **Клонирование репозитория**
+
+git clone https://github.com/your-username/theater-tickets.git
+cd theater-tickets
+
+Установка зависимостей:
+npm install
+
+Запуск development сервера:
+npm run dev
+
+Сборка для production:
+npm run build
+npm run preview
+
+**Непроектные файлы**
+Конфигурационные файлы:
+
+tsconfig.json - Конфигурация TypeScript
+
+vite.config.ts - Конфигурация Vite
+
+.gitignore - Игнорируемые файлы Git
+
+
