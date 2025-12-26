@@ -49,23 +49,23 @@ classnames - Утилита для работы с CSS классами
 git clone https://github.com/your-username/theater-tickets.git
 cd theater-tickets
 
-Установка зависимостей:
+2. **Установка зависимостей:**
 
 npm install
 
-Запуск development сервера:
+3. **Запуск development сервера:**
 
 npm run dev
 
-Сборка для production:
+4. **Сборка для production:**
 
 npm run build
 
 npm run preview
 
-**Непроектные файлы**
+### Непроектные файлы
 
-Конфигурационные файлы:
+**Конфигурационные файлы:**
 
 tsconfig.json - Конфигурация TypeScript
 
